@@ -3,7 +3,7 @@
   margin: 0 auto;
   padding: 0 15px;
 }
-        /* Basic */
+
         * {
         margin: 0;
         padding: 0;
@@ -48,6 +48,7 @@
                 nav a:hover {
                     color: #007BFF; 
                 }
+
 /* Hero Section */
 #hero {
     height: 600px; 
@@ -72,63 +73,66 @@
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
   }
   
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body, html {
-    width: 100%;
-    font-family: Arial, sans-serif;
-  }
-  
-  section {
-    width: 100%;
-    display: block; 
-    margin-bottom: 2rem; 
-  }
-  
   /* About Me Section */
   #about-me {
-    background-color: #fff;
-    padding: 4rem 0;
+    padding: 50px 20px;
   }
   
   #about-me .wrapper {
-    display: flex;
-    justify-content: center;
-    max-width: 940px;
-    width: 100%;
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: 3fr 1fr; 
+    gap: 20px;
+    max-width: 1200px;
     margin: 0 auto;
   }
   
   #about-me .text {
+    grid-column: 1, 2;
+  }
+  
+  #about-me .bio-img {
+    grid-column: 3; 
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1.5rem;
+    justify-content: right;
+    align-items: right;
+  }
+  
+  #about-me h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  #about-me p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
   }
   
   #about-me img {
-    width: 33.33%;
-    object-fit: cover;
-    border-radius: 10px;
-    align-self: flex-end; 
+    max-width: 100%;
+    height: auto;
+    max-width: 400px;  
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
+  
+    #about-me .text,
+    #about-me .bio-img {
+      grid-column: span 1;
+      margin-bottom: 20px;
+    }
   
 /* Services Section */
   #services {
     background-color: #fafafa;
     padding: 60px 20px;
     display: flex;
-    justify-content: center;
+    align-items: center;
   }
   
   #services .wrapper {
     width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
   }
   
