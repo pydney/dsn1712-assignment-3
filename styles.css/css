@@ -1,0 +1,95 @@
+.wrapper {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+header {
+  background-color: #000;
+  color: #fff;
+  padding: 20px 0; 
+}
+
+header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  gap: 20px; 
+}
+
+nav a {
+  color: #fff; 
+  text-decoration: none; 
+  font-size: 16px; 
+}
+
+@media (max-width: 940px) {
+  header .wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+  nav {
+    width: 100%;
+    justify-content: flex-start;
+    margin-top: 10px;
+  }
+
+  nav a {
+    margin-right: 20px;
+  }
+
+  /* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: #000; /* Background color */
+    color: #fff; /* Font color */
+    padding: 20px 0; /* Padding for top and bottom */
+  }
+  
+  header div {
+    display: flex; /* Flexbox container */
+    justify-content: space-between; /* Space between name and navigation */
+    align-items: center; /* Vertically align name and nav */
+    max-width: 940px; /* Max width */
+    margin: 0 auto; /* Center the content */
+    padding: 0 20px; /* Horizontal padding */
+  }
+  
+  /* Styling for the name */
+  header .name {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Navigation Styles */
+  nav ul {
+    list-style-type: none; /* Remove bullets */
+    display: flex; /* Arrange links horizontally */
+  }
+  
+  nav ul li {
+    margin-left: 30px; /* Space between navigation items */
+  }
+  
+  nav a {
+    text-decoration: none; /* Remove underline from links */
+    color: #fff; /* Font color */
+    font-size: 16px;
+  }
+  
+  nav a:hover {
+    color: #007BFF; /* Change color on hover */
+  }
+  
