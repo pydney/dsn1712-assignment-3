@@ -77,19 +77,13 @@
   }
   
   #about-me .wrapper {
-    display: grid;
-    grid-template-columns: 3fr 1fr; 
+    display: flex;
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
   }
   
-  #about-me .text {
-    grid-column: span 1;
-  }
-  
   #about-me .bio-img {
-    grid-column: span 1; 
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
@@ -99,7 +93,15 @@
     font-size: 2.5em;
     margin-bottom: 20px;
   }
-  
+
+  #about-me .columns {
+    display: flex;
+  }
+
+  #about-me .text-column {
+    flex: 1;
+  } 
+
   #about-me p {
     font-size: 1.1em;
     line-height: 1.6;
@@ -107,9 +109,8 @@
   }
   
   #about-me img {
-    max-width: 100%;
+    max-width: 50%;
     height: auto;
-    max-width: 400px;  
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
@@ -123,27 +124,15 @@
   }
   
   #services .wrapper {
-
     width: 100%;
-    max-width: 1200px;
+    max-width: 940px;
     margin: 0 auto;
   }
   
   #services h2 {
     text-align: center;
     font-size: 2.5rem;
-    margin: 0 auto 40px;
-    grid-column: span 3;
     width: 100%;
-  }
-  
-  #services div {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(300px, 1fr));
-    gap: 30px;
-    justify-items: stretch;
-    width: 100%;
-    padding: 0 20px;
   }
   
   #services article {
@@ -165,7 +154,13 @@
     margin-bottom: 15px;
   }
   
+  #services .article-container {
+    display: flex;
+    justify-content: center;
+  }
+
   #services .btn {
+    max-width: 200px;
     margin-top: auto;
     padding: 12px 20px;
     background-color: #000;
@@ -204,18 +199,43 @@
     text-align: center;
   }
   
-  #work .images {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+.work-field {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 400px ;
+
+  width: auto;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.work-field img {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+}
+
+.work-field img:nth-child(1) {
+    grid-column: 1 / 2;
   }
-  
-  #work .images img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 10px;
+ .work-field img:nth-child(2) {
+    grid-column: 2 / 3;
   }
+    .work-field img:nth-child(3) {
+    grid-column: 1 / 2;
+    grid-row: 2
+  }
+     .work-field img:nth-child(4) {
+    grid-column: 2 / 3;
+    grid-row: 2
+  }
+     .work-field img:nth-child(5) {
+    grid-column: 3 / 4;
+    grid-row: 2
+   
+  }
+
+
   
   /* Footer */
   footer {
