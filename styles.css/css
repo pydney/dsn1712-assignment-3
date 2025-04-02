@@ -4,7 +4,7 @@
   padding: 0 15px;
 }
 
-        * {
+    * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
@@ -55,11 +55,9 @@
     background-size: cover; 
     background-position: center; 
     filter: grayscale(70%); 
-    
     display: flex; 
     justify-content: center; 
     align-items: center; 
-    
     position: relative; 
   }
   
@@ -87,14 +85,14 @@
   }
   
   #about-me .text {
-    grid-column: 1, 2;
+    grid-column: span 1;
   }
   
   #about-me .bio-img {
-    grid-column: 3; 
+    grid-column: span 1; 
     display: flex;
-    justify-content: right;
-    align-items: right;
+    justify-content: flex-end;
+    align-items: flex-end;
   }
   
   #about-me h2 {
@@ -116,12 +114,6 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
-    #about-me .text,
-    #about-me .bio-img {
-      grid-column: span 1;
-      margin-bottom: 20px;
-    }
-  
 /* Services Section */
   #services {
     background-color: #fafafa;
@@ -131,6 +123,7 @@
   }
   
   #services .wrapper {
+
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -181,7 +174,8 @@
     border-radius: 5px;
     font-weight: bold;
     text-align: center;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+
   }
   
   #services .btn:hover {
@@ -189,9 +183,6 @@
     color: #000;
     border-color: #000;
   }
-  
-  
-  
   
   /* My Work Section */
   #work {
@@ -210,6 +201,7 @@
     max-width: 940px;
     margin: 0 auto;
     margin-bottom: 2rem;
+    text-align: center;
   }
   
   #work .images {
@@ -231,5 +223,23 @@
     color: white;
     text-align: center;
     padding: 1rem 0;
+  }
+
+  @media (max-width: 768px) {
+    #about-me .wrapper {
+      grid-template-columns: 1fr;
+    }
+  
+    #services div {
+      grid-template-columns: 1fr;
+    }
+  
+    #services h2 {
+      font-size: 2rem;
+    }
+  
+    #work .images {
+      grid-template-columns: 1fr;
+    }
   }
   
